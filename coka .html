@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coca Moka Beverages Ltd</title>
+
+<link rel="icon" type="image/png" href="https://plus.unsplash.com/premium_photo-1679826780040-c48444660e21?w=500">
+
+    <style>
+
+      *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
+body{background:#f4f4f4;color:#333;}
+
+/* HEADER */
+        header{
+        background:#111;
+        color:white;
+        padding:15px 40px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        }
+        header img{height:50px;}
+        nav a{
+        color:white;
+        margin-left:20px;
+        text-decoration:none;
+        font-weight:bold;
+        }
+        nav a:hover{color:#ff3c00;}
+
+        body {
+            line-height: 1.6;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            height: 70vh;
+            background: url('https://media.istockphoto.com/id/2211334600/photo/happy-woman-taking-soda-at-refrigerated-section-in-a-supermarket.webp?a=1&b=1&s=612x612&w=0&k=20&c=K0ohe0C6o6TsEWnwArEHE-nXccGdGXCmWfa0vYK0AX0=') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 60px;
+        }
+
+        .hero-text {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            color: white;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+
+        .hero-text h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+        }
+        
+
+                /* SECTION */
+        section{padding:60px 20px;text-align:center;}
+        .executives{background:white;}
+        .exec-container{
+        display:flex;
+        justify-content:center;
+        gap:40px;
+        flex-wrap:wrap;
+        }
+        .exec-card{width:280px;}
+        .exec-card img{
+        width:100%;
+        height:220px;
+        object-fit:cover;
+        border-radius:10px;
+        }
+        .exec-card h3{margin-top:15px;}
+
+
+        /* ABOUT SECTION */
+        .about {
+            padding: 80px 20px;
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+        .about h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* SLIDER */
+        .slider{
+        position:relative;
+        width:100%;
+        max-width:1000px;
+        margin:40px auto;
+        overflow:hidden;
+        border-radius:10px;
+        }
+        .slides{
+        display:flex;
+        width:800%;
+        animation:slide 40s infinite;
+        }
+        .slides img, .slides video{
+        width:1000px;
+        height:400px;
+        object-fit:cover;
+        }
+
+        @keyframes slide{
+        0%{transform:translateX(0);}
+        12.5%{transform:translateX(-1000px);}
+        25%{transform:translateX(-2000px);}
+        37.5%{transform:translateX(-3000px);}
+        50%{transform:translateX(-4000px);}
+        62.5%{transform:translateX(-5000px);}
+        75%{transform:translateX(-6000px);}
+        87.5%{transform:translateX(-7000px);}
+        100%{transform:translateX(0);}
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #111;
+            color: #eee;
+            padding: 60px 20px 20px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 220px;
+        }
+
+        .footer-column h3,
+        .footer-column h4 {
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .footer-column p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-column ul li a:hover {
+            color: #ff3c00;
+        }
+
+        .footer-column input {
+            padding: 8px;
+            width: 100%;
+            margin-top: 10px;
+            border: none;
+        }
+
+        .footer-column button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #ff3c00;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .footer-column button:hover {
+            background: #e63200;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 13px;
+            color: #aaa;
+            border-top: 1px solid #333;
+            padding-top: 15px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero {
+                padding-left: 20px;
+            }
+
+            .hero-text {
+                max-width: 90%;
+            }
+
+            .footer-container {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!--header-->
+ <header>
+<img src="https://plus.unsplash.com/premium_photo-1679826780040-c48444660e21?w=500" alt="Logo">
+<nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Leadership</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to Coca Moka</h1>
+            <p>Delivering premium beverage innovation through leadership, excellence, and integrity.</p>
+        </div>
+    </section>
+
+
+
+    <!-- LEADERSHIP -->
+<section class="executives">
+<h2>Leadership Team</h2>
+<div class="exec-container">
+
+<div class="exec-card">
+<img src="https://media.istockphoto.com/id/2187596750/photo/construction-worker-shaking-hands-with-foreman.webp?a=1&b=1&s=612x612&w=0&k=20&c=TkDOdNDoDI4ej1dVAKiQCgSKmjhVKLdu7ZBE5C4kHSY=">
+<h3>Chief Executive Officer</h3>
+<p>Strategic Corporate Oversight</p>
+</div>
+
+<div class="exec-card">
+<img src="https://media.istockphoto.com/id/2186986083/photo/business-man-portrait-and-laptop-in-meeting-with-website-research-proposal-and-planning-at.webp?a=1&b=1&s=612x612&w=0&k=20&c=NxHEfu0iJQMlsce8ByAXwDjxTGKPRKy1Kj8CPAoDvgA=">
+<h3>Paul Schviokasky</h3>
+<p>Senior Operations Executive</p>
+</div>
+
+<div class="exec-card">
+<img src="https://media.istockphoto.com/id/2193229202/photo/smiling-black-programmer-talking-to-her-colleague-late-in-the-office.webp?a=1&b=1&s=612x612&w=0&k=20&c=jghUkjZHRU2HQ7P3SZQU4X64v_rkTdFKNgPkWzMSQYo=">
+<h3>Executive Board</h3>
+<p>Technology & Governance</p>
+</div>
+
+</div>
+</section>
+
+
+    <!-- WORKER SLIDER -->
+<section>
+<h2>Our Production & Workforce</h2>
+<div class="slider">
+<div class="slides">
+
+<video autoplay muted loop>
+<source src="https://media.istockphoto.com/id/1301206741/video/warehouse-worker-pulling-a-pallet-truck-in-a-bottling-factory-4k-dci-slow-motion-footage-from.avif?s=640x640&k=20&c=uHEIOGUaZ3CmC7g6DjDuomN6Pp1OUW7hfRhfKxSl4X8=" type="video/mp4">
+</video>
+
+<img src="https://media.istockphoto.com/id/1097331892/photo/professional-technologist-checking-production-in-factory-industrial-worker-with-tablet-in.webp?a=1&b=1&s=612x612&w=0&k=20&c=vuGob2iv7MTRpK7hE-nuO9UF3DbKhKBcXKlGUMznmhY=">
+<img src="https://media.istockphoto.com/id/1162124477/photo/worker-pouring-beer-from-fermanting-tank.webp?a=1&b=1&s=612x612&w=0&k=20&c=jclVHC1Edo7y8XLQy4nw81Cii34NP5s2h55azAQTWpM=">
+<img src="https://media.istockphoto.com/id/1159536981/photo/adjusting-the-pressure-in-barrels-in-brewery.webp?a=1&b=1&s=612x612&w=0&k=20&c=FunlR0xyyWxkeOWzakcRYeV11ab78oMjkrnPCeUBmt0=">
+<img src="https://media.istockphoto.com/id/1211080407/photo/mid-adult-woman-in-factory-with-digital-tablet.webp?a=1&b=1&s=612x612&w=0&k=20&c=zaLbfDfsRYGuEdypcn7KS56CzZC0rXJsJ3pcZgXCqiU=">
+<img src="https://media.istockphoto.com/id/2225796083/photo/multiethnic-workers-loading-cardboard-boxes-with-online-orders-in-truck-working-at-night.jpg?s=612x612&w=0&k=20&c=dRKrm6OVBHogco9s50-TKG8dSbzMXXeKADGmGY8J1So=">
+<img src="https://media.istockphoto.com/id/2163043850/photo/loading-the-van-at-the-warehouse.jpg?s=612x612&w=0&k=20&c=gNxubSPdKDI60FpWcwFOz0nbAJ8QEIbSU3jmYVrekzE=">
+<img src="https://media.istockphoto.com/id/2190796343/photo/warehouse-workers.jpg?s=612x612&w=0&k=20&c=xCp9DTnX02_YccNlhFVQU65fIM5fu6wRCHw9i2khap8=">
+
+</div>
+</div>
+</section>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <h2>About Coca Moka</h2>
+        <p>
+            Coca Moka Beverages Ltd is a global beverage manufacturing company committed to innovation, 
+            operational excellence, and quality assurance. Through advanced production systems and 
+            executive leadership, we deliver safe, premium beverage solutions to markets worldwide 
+            while maintaining sustainability and regulatory compliance.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-column">
+                <h3>Coca Moka Beverages Ltd</h3>
+                <p>
+                    A global leader in beverage manufacturing, committed to quality control,
+                    innovation, and responsible production practices.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Operations</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Corporate Information</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="#">Compliance & Governance</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Stay Connected</h4>
+                <p>Subscribe for corporate updates and product announcements.</p>
+                <input type="email" placeholder="Your email address">
+                <button>Subscribe</button>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Coca Moka Beverages Ltd. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
