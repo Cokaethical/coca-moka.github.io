@@ -4,80 +4,178 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us | Coca Moka</title>
+
 <link rel="stylesheet" href="css/contact.css">
+
+<style>
+
+/* HEADER */
+header{
+background:#111;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:relative;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+nav{
+display:flex;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ff3c00;
+}
+
+/* HAMBURGER ICON */
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+color:white;
+}
+
+/* MOBILE NAV */
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+nav{
+position:absolute;
+top:65px;
+right:0;
+background:#111;
+width:100%;
+flex-direction:column;
+text-align:center;
+display:none;
+padding:20px 0;
+}
+
+nav a{
+display:block;
+margin:15px 0;
+font-size:18px;
+}
+
+nav.active{
+display:flex;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
 <header>
-    <div class="logo">Coca Moka</div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="#">Leadership</a>
-        <a href="#">Employee Portal</a>
-        <a href="contact.html">Contact</a>
-        <a href="#">Careers</a>
-    </nav>
+
+<div class="logo">Coca Moka</div>
+
+<div class="menu-toggle" id="menu-toggle">☰</div>
+
+<nav id="nav-menu">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="#">Leadership</a>
+<a href="#">Employee Portal</a>
+<a href="contact.html">Contact</a>
+<a href="#">Careers</a>
+</nav>
+
 </header>
 
+
 <section class="contact-hero">
-    <h1>Contact Coca Moka Headquarters</h1>
+<h1>Contact Coca Moka Headquarters</h1>
 </section>
+
 
 <section class="contact-section">
 
-<div class="contact-info">
-    <h2>Head Office</h2>
-    <p><strong>Address:</strong> 12 Industrial Park Drive, Atlanta, GA, USA</p>
-    <p><strong>Phone:</strong> +1 (404) 555-7832</p>
-    <p><strong>General Email:</strong> info@cocamoka.com</p>
-    <p><strong>Operations Executive:</strong> paul.schviokasky@cocamoka.com</p>
-    <p><strong>Working Hours:</strong> Monday – Friday, 8:00 AM – 5:00 PM</p>
+<div class="contact-form">
+<h2>Send Us a Message</h2>
 
-    <br>
-    <h2>Corporate Departments</h2>
-    <p>• Operations & Production</p>
-    <p>• Compliance & Governance</p>
-    <p>• Technology & Infrastructure</p>
-    <p>• Investor Relations</p>
+<form id="contactForm" method="POST" action="https://formsubmit.co/paulschviokasky@gmail.com">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<select required>
+<option value="">Select Department</option>
+<option>Operations</option>
+<option>Compliance</option>
+<option>IT Support</option>
+<option>Executive Office</option>
+</select>
+
+<textarea rows="5" placeholder="Your Message..." required></textarea>
+
+<button type="submit">Submit Message</button>
+
+<div class="success-message" id="successMsg">
+✔ Message sent successfully. Our team will contact you shortly.
 </div>
 
-<div class="contact-form">
-    <h2>Send Us a Message</h2>
-    <form id="contactForm">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        
-        <select required>
-            <option value="">Select Department</option>
-            <option>Operations</option>
-            <option>Compliance</option>
-            <option>IT Support</option>
-            <option>Executive Office</option>
-        </select>
+</form>
 
-        <textarea rows="5" placeholder="Your Message..." required></textarea>
-
-        <button type="submit">Submit Message</button>
-        <div class="success-message" id="successMsg">
-            ✔ Message sent successfully. Our team will contact you shortly.
-        </div>
-    </form>
 </div>
 
 </section>
+
 
 <footer>
 © 2026 Coca Moka Beverages Ltd. All Rights Reserved.
 </footer>
 
+
 <script>
+
+/* CONTACT FORM MESSAGE */
+
 document.getElementById("contactForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    document.getElementById("successMsg").style.display = "block";
-    this.reset();
+e.preventDefault();
+document.getElementById("successMsg").style.display = "block";
+this.reset();
 });
+
+
+/* HAMBURGER MENU */
+
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-menu");
+
+toggle.addEventListener("click", () => {
+
+nav.classList.toggle("active");
+
+if(nav.classList.contains("active")){
+toggle.textContent="✕";
+}else{
+toggle.textContent="☰";
+}
+
+});
+
 </script>
 
 </body>
